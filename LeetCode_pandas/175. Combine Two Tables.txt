@@ -1,0 +1,6 @@
+import pandas as pd
+
+def combine_two_tables(person: pd.DataFrame, address: pd.DataFrame) -> pd.DataFrame:
+   merage_df = pd.merge (person , address ,on='personId' ,how ='left')
+   result = merage_df[['firstName', 'lastName', 'city', 'state']]
+   return result
